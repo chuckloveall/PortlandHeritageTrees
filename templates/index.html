@@ -6,7 +6,7 @@
   <title>PDX Heritage Trees</title>
   <!-- icon from google with creative commons license -->
   <link rel="shortcut icon" href="static/images/favicon.ico">
-  
+
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -110,8 +110,10 @@
     </div>
 
     <!-- d3 JavaScript -->
-    <script type="text/javascript" src="static/js/config.js"></script>
-
+    <!-- <script type="text/javascript" src="static/js/config.js"></script> -->
+    <script>
+        const API_KEY= {{api_key}}
+    </script>
     <!-- Marker Cluster JS -->
     <script type="text/javascript"
       src="https://unpkg.com/leaflet.markercluster@1.0.3/dist/leaflet.markercluster.js"></script>
