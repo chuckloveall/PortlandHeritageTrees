@@ -12,12 +12,12 @@ app = Flask(__name__)
 # mongo = PyMongo(app, uri="mongodb://localhost:27017/portland_census_db")
 app.config["MONGO_URI"] = os.environ['MONGO_URI']
 # create route that renders index.html template
-@app.route("./")
+@app.route("/")
 def index():
     # portland_census_db.portland_census_db database.collection
 
     return render_template("index.html", api_key= os.environ['API_KEY'])
-@app.route("./api/censusdata/")
+@app.route("/api/censusdata/")
 def getCensusData():
     census_data= list(mongo.db.portland_census_db.find())
     # print(type(census_data))
