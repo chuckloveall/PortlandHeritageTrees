@@ -16,7 +16,7 @@ app.config["MONGO_URI"] = os.environ['MONGO_URI']
 def index():
     # portland_census_db.portland_census_db database.collection
 
-    return render_template("index.html")
+    return render_template("index.html", api_key= os.environ['API_KEY'])
 @app.route("/api/censusdata/")
 def getCensusData():
     census_data= list(mongo.db.portland_census_db.find())
