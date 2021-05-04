@@ -1,6 +1,6 @@
 // =====================
 // declare API url links for promise
-const census = "/api/censusdata/"
+const census = "/api/censusdata"
 const neighborhoodURL = "https://opendata.arcgis.com/datasets/9f50a605cf4945259b983fa35c993fe9_125.geojson"
 const treesURL = "https://opendata.arcgis.com/datasets/fd1d618ac3174ad5be730524a4dd778e_26.geojson"
 
