@@ -2,12 +2,12 @@
 import os
 from flask import Flask, render_template, redirect, url_for, jsonify
 from flask_pymongo import PyMongo
-# from flask_cors import CORS
+from flask_cors import CORS
 import requests
 
 # create instance of Flask app
 app = Flask(__name__)
-# CORS(app)
+CORS(app)
 # Use PyMongo to establish Mongo connection
 # mongo = PyMongo(app, uri="mongodb://localhost:27017/portland_census_db")
 app.config["MONGO_URI"] = os.environ['MONGO_URI']
