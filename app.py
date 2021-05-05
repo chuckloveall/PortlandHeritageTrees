@@ -4,15 +4,16 @@ from flask import Flask, render_template, redirect, url_for, jsonify
 from flask_pymongo import PyMongo
 from flask_cors import CORS
 import requests
-
+MONGO_URI= "mongodb+srv://treehugger:sfVVbh0aSDAS7ybT@cluster0.mfrzs.mongodb.net/portland_census_db?retryWrites=true&w=majority"
 # create instance of Flask app
 app = Flask(__name__)
 CORS(app)
 # Use PyMongo to establish Mongo connection
 # mongo = PyMongo(app, uri="mongodb://localhost:27017/portland_census_db")
 # app.config["MONGO_URI"] = os.environ['MONGO_URI']
+mongo = PyMongo(app, MONGO_URI)
 app.config["MONGO_URI"]= os.environ["MONGO_URI"]
-mongo = PyMongo(app)
+
 # create route that renders index.html template
 @app.route("/")
 def index():
