@@ -10,7 +10,9 @@ app = Flask(__name__)
 CORS(app)
 # Use PyMongo to establish Mongo connection
 # mongo = PyMongo(app, uri="mongodb://localhost:27017/portland_census_db")
-app.config["MONGO_URI"] = os.environ['MONGO_URI']
+# app.config["MONGO_URI"] = os.environ['MONGO_URI']
+app.config["MONGO_URI"]= os.environ["MONGO_URI"]
+mongo = PyMongo(app)
 # create route that renders index.html template
 @app.route("/")
 def index():
